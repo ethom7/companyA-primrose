@@ -1,7 +1,17 @@
 package com.primrose.employees;
 
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Field;
+import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.Index;
+import org.mongodb.morphia.annotations.Indexes;
+
+@Entity("users")
+@Indexes(@Index(value = "userName", fields = @Field("userName")))
 public class User {
 	
+	@Id
+	private int id;
 	private String givenName;
 	private String userName;
 	private String password;

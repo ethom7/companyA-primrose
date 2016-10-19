@@ -2,16 +2,23 @@ package com.primrose.employees;
 
 import java.util.Date;
 
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.Reference;
 
+@Entity("employees")
 public class Employee {
 	
+	@Id
 	private int employeeId;
 	private String firstName;
 	private String middleName;
 	private String lastName;
 	private int socialSecurityNumber;
 	private Date dateOfBirth;
+	@Reference
 	private PostalAddress postalAddress;
+	@Reference
 	private EmergencyContact emergencyContact;
 	private String phoneNumber;
 	
