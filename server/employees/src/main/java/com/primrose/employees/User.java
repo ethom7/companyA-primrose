@@ -6,7 +6,7 @@ import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Index;
 import org.mongodb.morphia.annotations.Indexes;
 
-@Entity("users")
+@Entity("user")
 @Indexes(@Index(value = "userName", fields = @Field("userName")))
 public class User {
 	

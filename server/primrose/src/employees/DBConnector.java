@@ -16,13 +16,13 @@ public class DBConnector {
 						.filter("userName ==", user)
 						.asList();
 
+		for (User us : users) {
+			if (us.getUserName().equals(user)) {
+				return "Yes";
+			}
+		}
 
-		if (users.size() > 1 ) {
-			return "Yes";
-		}
-		else {
-			return "No";
-		}
+		return "No";
 
 	}
 
