@@ -1,0 +1,27 @@
+Run Notes for RESTFUL Web App
+
+To build .war for deployment run
+
+ant -Dwar.name=employees deploy
+
+inputs:
+"ebcalder", "TeamPrimrose!1"
+
+@GET method
+
+localhost:8080/employees/resourcesEmployee/doLogin/ebcalder/TeamPrimrose!1
+
+
+The URL is structed as below:
+
+[Server Address]/[war file name]/[@ApplicationPath("/resourcesEmployee") set in RestfulUser.java]/[method name from WebController.java]/[Method Parameter username pulled from @PathParam]/[Method Parameter password pulled from @PathParam]
+
+
+
+
+
+
+
+1. Compile/deploy in the usual way with the Ant script: ant -Dwar.name=employees deploy
+2. The base URL is: http://localhost:8080/employees/resourcesEmployee/.
+3. Various curl scripts or the equivalent can be used to confirm that the CRUD operations are supported.
